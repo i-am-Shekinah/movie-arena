@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react';
+
+import HeroSection from '../components/HeroSection';
 
 const Home = () => {
-  return <div className="animate-wiggle">Home</div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 };
 
 export default Home;

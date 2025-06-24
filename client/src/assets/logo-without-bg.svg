@@ -1,0 +1,14 @@
+<svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Film Reel Icon -->
+  <circle cx="40" cy="40" r="30" fill="#e50914" />
+  <circle cx="40" cy="40" r="6" fill="#000000" />
+  <circle cx="40" cy="20" r="4" fill="#000000" />
+  <circle cx="40" cy="60" r="4" fill="#000000" />
+  <circle cx="20" cy="40" r="4" fill="#000000" />
+  <circle cx="60" cy="40" r="4" fill="#000000" />
+
+  <!-- App Name Text -->
+  <text x="85" y="47" fill="#ffffff" font-family="Verdana, sans-serif" font-size="28" font-weight="bold">
+    Movie Arena
+  </text>
+</svg>

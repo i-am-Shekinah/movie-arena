@@ -2,14 +2,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #f84565;
-  --color-primary-dull: #d63854;
+  --color-primary: #e20913;
+  --color-primary-dull: #ff3b3f;
 }
 
 * {
   font-family: "Outfit", sans-serif;
   scrollbar-width: thin;
   scrollbar-color: #787777 #1e1e1e;
+}
+
+body {
+  color: #fff;
+  background-color: #09090b;
 }
 
 /* Chrome, Safari, Edge */
