@@ -17,7 +17,7 @@ import {
   useUser,
 } from '@clerk/clerk-react';
 
-import { assets } from '../assets/assets';
+import { assets } from '../../assets/assets';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -104,7 +104,7 @@ const Navbar = () => {
         {!user ? (
           <button
             onClick={() => openSignIn()}
-            className="px-4 py-1 sm:px-7 sm:py-2 bg-primary hover:bg-primary-dull transition rounded-full font-medium cursor-pointer"
+            className="px-7 py-2 bg-primary hover:bg-primary-dull transition rounded-full font-medium cursor-pointer"
           >
             Login
           </button>

@@ -3,7 +3,8 @@
 
 @theme {
   --color-primary: #e20913;
-  --color-primary-dull: #ff3b3f;
+  --color-primary-dull: rgba(226, 9, 19, 0.8); /*#ff3b3f*/
+  --color-darkBg: #09090b;
 }
 
 * {
@@ -29,4 +30,12 @@ body {
 
 .scrollable::-webkit-scrollbar-track {
   background-color: #1e1e1e;
+}
+
+.btn-rounded-full {
+  @apply flex items-center gap-1 px-6 py-3 text-sm bg-primary hover:bg-primary-dull hover:gap-4 transition-all duration-300 ease-in-out rounded-full font-medium cursor-pointer;
+}
+
+.btn-flat {
+  @apply px-10 py-3 text-sm bg-primary hover:bg-primary-dull transition-colors rounded-md font-medium cursor-pointer;
 }

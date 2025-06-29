@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-import { assets } from '../assets/assets';
+import { assets } from '../../assets/assets';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const HeroSection = () => {
         onClick={() => {
           navigate("/movies");
         }}
-        className="flex items-center gap-1 px-6 py-3 text-sm bg-primary hover:bg-primary-dull transition-colors rounded-full font-medium cursor-pointer"
+        className="flex items-center gap-1 px-6 py-3 text-sm bg-primary hover:bg-primary-dull hover:gap-4 transition-all duration-300 ease-in-out rounded-full font-medium cursor-pointer"
       >
         Explore Movies
         <ArrowRight className="size-5" />

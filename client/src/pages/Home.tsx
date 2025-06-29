@@ -1,11 +1,13 @@
 import React from 'react';
 
-import HeroSection from '../components/HeroSection';
+import FeaturedMoviesSection from '../components/section/FeaturedMoviesSection';
+import HeroSection from '../components/section/HeroSection';
 
 const Home = () => {
   return (
     <>
       <HeroSection />
+      <FeaturedMoviesSection />
     </>
   );
 };
