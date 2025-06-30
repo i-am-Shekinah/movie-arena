@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
 import { PlayCircleIcon } from 'lucide-react';
 import ReactPlayer from 'react-player';
@@ -7,6 +10,7 @@ import {
   dummyTrailers,
   type TrailerType,
 } from '../../assets/assets';
+import useInView from '../../hooks/useInView';
 import BlurCircle from '../ui/BlurCircle';
 
 const Trailers = () => {
@@ -14,6 +18,12 @@ const Trailers = () => {
     dummyTrailers[0]
   );
   const [playing, setPlaying] = useState<boolean>(true);
+  const { ref, inView } = useInView<HTMLDivElement>(0.5);
+
+  useEffect(() => {
+    if (inView) setPlaying(true);
+    else setPlaying(false);
+  }, [inView]);
 
   return (
     <div className="px-6 md:px-16 lg:px-24 xl:px-44 py-20 overflow-hidden">
@@ -21,12 +31,13 @@ const Trailers = () => {
         Trailers
       </h2>
 
-      <div className="relative mt-6">
+      <div ref={ref} className="relative mt-6">
         <BlurCircle top="-100px" right="-100px" />
         <ReactPlayer
           data-aos="fade-up"
           url={currentTrailer.videoUrl}
-          controls={true}
+          muted
+          controls
           playing={playing}
           className="mx-auto max-w-full"
           width="960px"
