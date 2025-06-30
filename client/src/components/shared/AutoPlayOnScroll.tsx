@@ -10,34 +10,29 @@ import useInView from '../../hooks/useInView';
 interface AutoPlayOnScrollProps {
   url: string;
   threshold?: number;
-  [key: string]: any;
+  className?: string;
+  playerProps: React.ComponentProps<typeof ReactPlayer>;
 }
 
 const AutoPlayOnScroll: React.FC<AutoPlayOnScrollProps> = ({
   url,
   threshold = 0.5,
-  ...playerProps
+  className,
+  playerProps = {},
 }) => {
   const { ref, inView } = useInView<HTMLDivElement>(threshold);
   const [playing, setPlaying] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (inView) setPlaying(true);
-    else setPlaying(false);
-  }, [inView]);
+  useEffect(() => setPlaying(inView), [inView]);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className={className}>
       <ReactPlayer
-        data-aos="fade-up"
         url={url}
         muted
         controls
         playing={playing}
-        className="mx-auto max-w-full"
         {...playerProps}
-        width="960px"
-        height="540px"
       />
     </div>
   );

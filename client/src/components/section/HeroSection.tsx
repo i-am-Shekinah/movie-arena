@@ -13,7 +13,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-start justify-center gap-4 px-6 md:px-16 lg:px-36 bg-[url('/backgroundImage.png')] bg-cover bg-center h-screen ">
+    <section className="flex flex-col items-start justify-center gap-4 px-6 md:px-16 lg:px-36 bg-[url('/backgroundImage.png')] bg-cover bg-center h-screen overflow-x-hidden ">
       <img
         data-aos="fade-up"
         data-aos-delay="150"
@@ -67,12 +67,12 @@ const HeroSection = () => {
         onClick={() => {
           navigate("/movies");
         }}
-        className="flex items-center gap-1 px-6 py-3 text-sm bg-primary hover:bg-primary-dull hover:gap-4 transition-all duration-300 ease-in-out rounded-full font-medium cursor-pointer"
+        className="group flex items-center gap-1 px-6 py-3 text-sm bg-primary hover:bg-primary-dull duration-300 ease-in-out rounded-full font-medium cursor-pointer"
       >
         Explore Movies
-        <ArrowRight className="size-5" />
+        <ArrowRight className="size-5 transform transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
       </button>
-    </div>
+    </section>
   );
 };
 

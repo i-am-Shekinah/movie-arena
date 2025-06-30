@@ -10,7 +10,7 @@ import MovieCard from '../ui/MovieCard';
 const FeaturedMoviesSection = () => {
   const navigate = useNavigate();
   return (
-    <section className="mt-24 px-6 md:px-16 lg:px-36">
+    <section className="mt-24 px-6 md:px-16 lg:px-36 overflow-x-hidden">
       {/* header of the section */}
       <div className="relative flex items-center justify-between">
         <BlurCircle top="-80px" right="-100px" />

@@ -5,7 +5,7 @@ import {
 } from 'react';
 
 const useInView = <T extends HTMLElement>(threshold = 0.5) => {
-  const ref = useRef<T>(null);
+  const ref = useRef<T>(null)
   const [inView, setInView] = useState<boolean>(false)
 
   useEffect(() => {
@@ -20,3 +20,4 @@ const useInView = <T extends HTMLElement>(threshold = 0.5) => {
 }
 
 export default useInView
+
