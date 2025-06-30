@@ -14,8 +14,16 @@ const FeaturedMoviesSection = () => {
       {/* header of the section */}
       <div className="relative flex items-center justify-between">
         <BlurCircle top="-80px" right="-100px" />
-        <p className="text-white font-semibold">Now Showing </p>
+        <h2
+          data-aos="fade-up"
+          data-aos-delay="150"
+          className="text-white font-semibold"
+        >
+          Now Showing{" "}
+        </h2>
         <button
+          data-aos="fade-up"
+          data-aos-delay="150"
           onClick={() => navigate("/movies")}
           className="flex group items-center gap-1 text-gray-300 text-sm cursor-pointer"
         >
@@ -33,7 +41,11 @@ const FeaturedMoviesSection = () => {
       </div>
 
       {/* show more btn */}
-      <div className="flex justify-center mt-20">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="350"
+        className="flex justify-center mt-20"
+      >
         <button
           onClick={() => {
             navigate("/movies");

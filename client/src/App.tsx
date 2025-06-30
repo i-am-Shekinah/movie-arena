@@ -1,5 +1,8 @@
-import React from 'react';
+import 'aos/dist/aos.css';
 
+import React, { useEffect } from 'react';
+
+import AOS from 'aos';
 import { Toaster } from 'react-hot-toast';
 import {
   Route,
@@ -18,6 +21,13 @@ import SeatLayout from './pages/SeatLayout';
 
 const App = () => {
   const isAdminRoute: boolean = useLocation().pathname.startsWith("/admin");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <>
