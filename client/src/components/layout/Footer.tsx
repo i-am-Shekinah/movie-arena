@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { assets } from '../../assets/assets';
+import { assets } from "../../assets/assets";
 
 const Footer = () => {
   return (
@@ -78,10 +78,10 @@ const Footer = () => {
               </a>
               <a
                 href="mailto:michaeloluwayemi11@gmail.com"
-                className="hover:opacity-75"
+                className="hover:opacity-75 
                 transition-opacity
                 duration-100
-                ease-in-ou3
+                ease-in-out"
               >
                 michaeloluwayemi11@gmail.com
               </a>
